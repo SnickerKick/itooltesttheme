@@ -1,2 +1,2 @@
 # itooltesttheme
-# Test theme
+Test theme
