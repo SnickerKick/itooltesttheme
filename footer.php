@@ -9,8 +9,8 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
 			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'libretto' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s.', 'libretto' ), 'WordPress' ); ?></a>
-					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'libretto' ), 'Libretto', '<a href="http://wordpress.com/themes/libretto/" rel="designer">WordPress.com</a>' ); ?>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'itool' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s.', 'itool' ), 'WordPress' ); ?></a>
+					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'itool' ), 'Insight Tools', '<a href="https://github.com/SnickerKick/itooltesttheme" rel="designer">insight-tools.com</a>' ); ?>
 			</div><!-- .site-info -->
 
 			<?php

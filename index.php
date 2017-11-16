@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php libretto_content_nav( 'nav-below' ); ?>
+			<?php // libretto_content_nav( 'nav-below' ); ?>
 
 		<?php else : // No posts to show ?>
 			<?php get_template_part( 'content', 'none' ); ?>

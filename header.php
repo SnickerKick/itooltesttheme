@@ -36,7 +36,7 @@
 					</button>
 				</div>
 				<div class="screen-reader-text skip-link">
-					<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'libretto' ); ?>"><?php esc_attr_e( 'Skip to content', 'libretto' ); ?></a>
+					<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'itool' ); ?>"><?php esc_attr_e( 'Skip to content', 'itool' ); ?></a>
 				</div>
 				<div class="menu-wrapper">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => false ) ); ?>
@@ -47,22 +47,21 @@
 
 		<?php if ( ! is_attachment() ) : // Don't show header for attachments ?>
 
-			<header id="masthead" class="site-header" role="banner"
+                <header id="masthead" class="site-header" role="banner" >
 
 			<?php
 			/*
 			 * If we have a custom image set, we're going to do some manipulation to the masthead height via JS,
 			 * This means that we need to pass the height of the image is being shown as a data-attribute.
 			 * This way, JS will know our image height without resorting to anything complicated.
+			 *
+			 * $libretto_header_image_height = libretto_get_header_image( 'height' );
+			 * if ( isset( $libretto_header_image_height ) ) :
+			 *	echo 'data-image-height="'. absint( $libretto_header_image_height ) . '"';
+			 * endif;
 			 */
-			$libretto_header_image_height = libretto_get_header_image( 'height' );
-			if ( isset( $libretto_header_image_height ) ) :
-				echo 'data-image-height="'. absint( $libretto_header_image_height ) . '"';
-			endif;
-			?>
-
-			>
-
+                        ?>
+			
 				<!-- PAGE HEADER -->
 				<div class="title-block">
 
@@ -75,7 +74,7 @@
 
 				<?php elseif ( is_single() ) : // Show the post title and metadata for posts ?>
 					<div class="entry-meta">
-						<?php libretto_posted_on(); ?>
+						<?php // libretto_posted_on(); ?>
 					</div><!-- .entry-meta -->
 					<h1><?php the_title(); ?></h1>
 
@@ -88,12 +87,12 @@
 				?>
 
 				<?php elseif ( is_404() ) : // Show "page not found" ?>
-					<h1><?php esc_html_e( 'Error', 'libretto' ); ?></h1>
-					<h3><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'libretto' ); ?></h3>
+					<h1><?php esc_html_e( 'Error', 'itool' ); ?></h1>
+					<h3><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'itool' ); ?></h3>
 
 				<?php elseif ( is_search() ) : // Search results ?>
-					<h1><?php esc_html_e( 'Search results', 'libretto' ); ?></h1>
-					<h3><?php printf( esc_html__( 'You searched for %s', 'libretto' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+					<h1><?php esc_html_e( 'Search results', 'itool' ); ?></h1>
+					<h3><?php printf( esc_html__( 'You searched for %s', 'itool' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
 
 				<?php endif; ?>
 

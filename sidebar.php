@@ -5,7 +5,7 @@
  * @package Insight_Tools
  */
 
-$active_sidebars = libretto_get_active_sidebars();
+// $active_sidebars = libretto_get_active_sidebars();
 
 // No sidebars? No content!
 if ( 0 === count( $active_sidebars )  ) {
