@@ -5,12 +5,12 @@
  * @package Insight_Tools
  */
 
-// $active_sidebars = libretto_get_active_sidebars();
+$active_sidebars = 0;
 
 // No sidebars? No content!
-// if ( 0 === count( $active_sidebars )  ) {
-//	return;
-//}
+if ( 0 === count( $active_sidebars )  ) {
+	return;
+}
 ?>
 
 <section id="footer-sidebar" class="clear widget-area" role="complementary">
